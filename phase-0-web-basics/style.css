@@ -12,6 +12,20 @@ header {
   background: #222;
   color: white;
   padding: 24px;
+  display: flex;                    /* flex ON karo */
+  justify-content: space-between;   /* main axis (row): dono kinaron pe */
+  align-items: center;              /* cross axis: vertically center */
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+    color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;   /* underline hatane ke liye */
 }
 
 /* 3. Sections card  */
@@ -21,6 +35,21 @@ section {
   border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 600px;
+}
+
+/* Parent: list ko row mein lao */
+#skills ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;   /* bullet points (•) hatao */
+  padding: 0;         /* browser ka default left padding hatao */
+}
+
+/* Har skill ek chip */
+#skills li {
+  padding: 6px 12px;  /* upar-neeche 6, left-right 12 */
+  border-radius: 999px; /* chip ko gol karne ke liye badi value, jaise 999px */
+  background: #eee;    /* koi halka color, jaise #eee */
 }
 
 
