@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* 2. Header */
+header {
+  background: #222;
+  color: white;
+  padding: 24px;
+}
+
+/* 3. Sections card  */
+section {
+  padding: 16px;
+  margin: 16px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+
