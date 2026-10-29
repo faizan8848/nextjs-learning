@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: sans-serif; }
+
+/* Header: mobile pe column, 600+ pe row */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #222;
+  color: white;
+}
+nav { display: flex; gap: 16px; }
+nav a { color: white; text-decoration: none; }
+
+/* Saare sections ek centered container jaise */
+main section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* Hero */
+#home { text-align: center; }
+.btn {
+  display: inline-block;   /* a inline hota hai, padding sahi lagne ke liye */
+  padding: 10px 20px;
+  margin: 4px;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+}
+
+/* Cards grid */
+.cards { display: flex; flex-wrap: wrap; gap: 16px; }
+.card {
+  width: 100%;              /* phone: 1 per row */
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+.chips li { padding: 4px 10px; border-radius: 999px; background: #eee; font-size: 14px; }
+
+footer { text-align: center; padding: 16px; }
+
+/* Tablet */
+@media (min-width: 600px) {
+  header { flex-direction: row; justify-content: space-between; align-items: center; }
+  .card { width: calc(50% - 8px); }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .card { width: calc((100% - 32px) / 3); }   /* 3 per row: 2 gaps hain, total 32px, teen cards mein baanto */
+}
