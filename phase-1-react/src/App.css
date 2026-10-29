@@ -43,7 +43,7 @@ main section {
 
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
-.chips li { padding: 4px 10px; border-radius: 999px; background: #eee; font-size: 14px; }
+.chips li { padding: 4px 10px; border-radius: 999px; background: #eee; font-size: 14px; color: #222; }
 
 footer { text-align: center; padding: 16px; }
 
@@ -57,3 +57,27 @@ footer { text-align: center; padding: 16px; }
 @media (min-width: 1024px) {
   .card { width: calc((100% - 32px) / 3); }   /* 3 per row: 2 gaps hain, total 32px, teen cards mein baanto */
 }
+
+.card:hover { border-color: #222; }
+.btn:active { transform: scale(0.97); }   /* dabate waqt */
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+
+.chip {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  cursor: pointer;   
+  background: white;
+  color: #222;    /* hover pe haath wala cursor, RN mein ye hota hi nahi */
+}
+
+.chip.active {          /* jis element pe dono class ho: chip AUR active */
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+.dark { background: #111; color: #eee; min-height: 100vh; }
+.dark .card { border-color: #444; }
+.dark .chips li { background: #333; color: #eee; }
