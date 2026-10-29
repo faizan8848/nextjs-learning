@@ -14,8 +14,20 @@ header {
   padding: 24px;
   display: flex;                    /* flex ON karo */
   justify-content: space-between;   /* main axis (row): dono kinaron pe */
-  align-items: center;              /* cross axis: vertically center */
+  flex-direction: column;
+  align-items: flex-start;           /* cross axis: vertically center */
 }
+
+@media (min-width: 600px) {   /* jab screen 600px ya usse badi ho */
+  header {
+    flex-direction: row; 
+    align-items: center;      /* desktop pe row */
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+}
+
 
 nav {
     display: flex;
@@ -43,6 +55,7 @@ section {
   gap: 8px;
   list-style: none;   /* bullet points (•) hatao */
   padding: 0;         /* browser ka default left padding hatao */
+  flex-wrap: wrap;
 }
 
 /* Har skill ek chip */
